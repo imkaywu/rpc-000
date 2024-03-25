@@ -1,7 +1,8 @@
-[gd_scene load_steps=69 format=3 uid="uid://d2wi7gkjmem4c"]
+[gd_scene load_steps=70 format=3 uid="uid://d2wi7gkjmem4c"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_60c12"]
 [ext_resource type="Texture2D" uid="uid://cbi1naj7fh7o" path="res://art/character/survivalgame-player-green.png" id="2_ub22j"]
+[ext_resource type="PackedScene" uid="uid://b6uhsqhx45avt" path="res://inventory/inventory_ui.tscn" id="3_8rv7m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3cmj"]
 atlas = ExtResource("2_ub22j")
@@ -548,7 +549,7 @@ animations = [{
 radius = 4.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(8, 360)
+position = Vector2(8, 364)
 script = ExtResource("1_60c12")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -561,9 +562,14 @@ position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_1jng3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, 1)
-rotation = 0.473167
+position = Vector2(-2, -4)
 limit_left = -1200
 limit_top = -700
 limit_right = 650
 limit_bottom = 700
+
+[node name="InventoryUI" parent="." instance=ExtResource("3_8rv7m")]
+offset_left = -44.0
+offset_top = -80.0
+offset_right = 43.0
+offset_bottom = -14.0
