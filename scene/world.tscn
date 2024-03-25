@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dykiee2q61aep"]
+[gd_scene load_steps=12 format=3 uid="uid://dykiee2q61aep"]
 
 [ext_resource type="PackedScene" uid="uid://d2wi7gkjmem4c" path="res://scene/player.tscn" id="1_me2k4"]
 [ext_resource type="Texture2D" uid="uid://de0x32efgtwij" path="res://art/environment/survivalgame-terrian-defult.png" id="2_a5lox"]
 [ext_resource type="Texture2D" uid="uid://b8805ylxx0mcj" path="res://art/environment/survivalgame-terrian-cliffs.png" id="3_135e5"]
 [ext_resource type="Texture2D" uid="uid://r5lxikmh7bb6" path="res://art/environment/survivalgame-trees.png" id="4_cbn7m"]
 [ext_resource type="Texture2D" uid="uid://dv8wyhsi0tcya" path="res://art/environment/survivalgame-terrian-water.png" id="5_i7qvv"]
+[ext_resource type="PackedScene" uid="uid://berb6omnu446o" path="res://scene/apple_tree.tscn" id="6_ww5mg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7chh"]
 texture = ExtResource("2_a5lox")
@@ -259,7 +260,7 @@ sources/3 = SubResource("TileSetAtlasSource_07ojq")
 scale = Vector2(2.5, 2.5)
 
 [node name="Player" parent="." instance=ExtResource("1_me2k4")]
-position = Vector2(0, 0)
+position = Vector2(-28.8, 42.8)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_spcps")
@@ -272,3 +273,6 @@ layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(-131073, 65537, 2, -131074, 65537, 2, -131075, 65537, 2, -131076, 65537, 2, -131077, 65537, 2, -131078, 65537, 2, -131079, 65537, 2, -131080, 65537, 2, -196608, 131073, 2, -262144, 131073, 1, -327680, 131073, 1, -131081, 1, 2, -196617, 196609, 1, -196618, 65537, 2, -196619, 65537, 2, -196620, 1, 2, -262156, 1, 1, -327692, 1, 1, -393228, 1, 1, -327681, 131073, 1, -262145, 131073, 2, -262146, 65537, 2, -262147, 65537, 2, -262148, 65537, 2, -262149, 262145, 1, -196613, 131073, 2, -196614, 1, 2, -262150, 1, 1, -327686, 1, 1, -393222, 196609, 1, -393223, 65537, 2, -393224, 65537, 2, -393225, 65537, 2, -393226, 65537, 2, -393227, 1, 2, -393216, 131073, 1, -458752, 131073, 1)
 layer_2/name = "3"
 layer_2/tile_data = PackedInt32Array(393204, 65538, 0, 393205, 65538, 0, 393206, 65538, 0, 393207, 65538, 0, 393208, 65538, 0, 393209, 65538, 0, 393210, 65538, 0, 393211, 65538, 0, 393212, 65538, 0, 393213, 65538, 0, 458740, 65538, 1, 458741, 65538, 1, 458742, 65538, 1, 458743, 65538, 1, 458744, 65538, 1, 458745, 65538, 1, 458746, 65538, 1, 458747, 65538, 1, 458748, 65538, 1, 458749, 65538, 1, 458750, 131074, 1, 327686, 65538, 0, 327685, 65538, 0, 327683, 65538, 0, 327684, 65538, 0, 327682, 65538, 0, 327681, 65538, 0, 393222, 65538, 1, 393221, 65538, 1, 393220, 65538, 1, 393219, 65538, 1, 393218, 65538, 1, 393217, 65538, 1, 327680, 786434, 0, 393216, 2, 1, -65542, 524290, 1, -9, 524290, 1, -65547, 524290, 1, 131062, 524290, 1, 196599, 524290, 1, 262132, 524290, 1, 327672, 524290, 1, 327675, 524290, 1, 262140, 524290, 1, 131068, 524290, 1, -3, 524290, 1, -327690, 524290, 1, -262152, 524290, 1, -327684, 524290, 1, -393221, 196610, 2, -393220, 262146, 2, -393219, 262146, 2, -393218, 327682, 2, -458750, 524290, 1, -327678, 524290, 1, -262143, 524290, 1, -131071, 524290, 1, -196605, 524290, 1, -262140, 524290, 1, -393212, 524290, 1, -131067, 524290, 1, 5, 524290, 1, -65533, 524290, 1, 65540, 524290, 1, 131075, 524290, 1, 65537, 524290, 1, 196609, 524290, 1, 262146, 524290, 1, 262149, 524290, 1, 393214, 327682, 0)
+
+[node name="AppleTree" parent="." instance=ExtResource("6_ww5mg")]
+position = Vector2(-54.8, 42)
