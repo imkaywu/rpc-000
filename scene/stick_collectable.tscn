@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm3ni81v2dhwc"]
+
+[ext_resource type="Resource" uid="uid://2iuhb2ssuuku" path="res://inventory/items/stick.tres" id="2_oai6f"]
+[ext_resource type="Texture2D" uid="uid://bb7fhkcrmstjv" path="res://art/environment/stick-icon.png" id="2_ryyyd"]
+
+[sub_resource type="GDScript" id="GDScript_1pxk6"]
+script/source = "extends StaticBody2D
+
+@export var item: InventoryItem
+
+var player = null
+
+
+func _on_interactable_area_body_entered(body):
+	if body.has_method('player'):
+		player = body
+		player.collect(item)
+		await get_tree().create_timer(0.1).timeout
+		self.queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7sok3"]
+radius = 13.0
+
+[node name="StickCollectable" type="StaticBody2D"]
+script = SubResource("GDScript_1pxk6")
+item = ExtResource("2_oai6f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ryyyd")
+
+[node name="InteractableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = SubResource("CircleShape2D_7sok3")
+
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
