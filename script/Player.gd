@@ -42,3 +42,7 @@ func play_anim(dir):
 
 func player():
 	pass
+
+
+func collect(item):
+	inventory.insert(item)
