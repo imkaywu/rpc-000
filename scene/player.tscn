@@ -302,7 +302,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_fapeo")
 }],
 "loop": true,
-"name": &"e-attach",
+"name": &"e-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -344,7 +344,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_eqhuh")
 }],
 "loop": true,
-"name": &"n-attach",
+"name": &"n-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -375,7 +375,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bqu5x")
 }],
 "loop": true,
-"name": &"ne-attach",
+"name": &"ne-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -406,7 +406,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_h7rin")
 }],
 "loop": true,
-"name": &"nw-attach",
+"name": &"nw-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -437,7 +437,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lsnk5")
 }],
 "loop": true,
-"name": &"s-attach",
+"name": &"s-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -468,7 +468,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mstwc")
 }],
 "loop": true,
-"name": &"se-attach",
+"name": &"se-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -499,7 +499,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_1rt6f")
 }],
 "loop": true,
-"name": &"sw-attach",
+"name": &"sw-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -530,7 +530,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ii7ob")
 }],
 "loop": true,
-"name": &"w-attach",
+"name": &"w-attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -554,8 +554,7 @@ script = ExtResource("1_60c12")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4i1hm")
-animation = &"idle"
-frame_progress = 0.846178
+animation = &"w-attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -573,3 +572,5 @@ offset_left = -44.0
 offset_top = -80.0
 offset_right = 43.0
 offset_bottom = -14.0
+
+[node name="Marker2D" type="Marker2D" parent="."]
