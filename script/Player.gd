@@ -9,6 +9,8 @@ var mouse_from_player_pos = null
 
 @export var inventory: Inventory
 
+@onready var camera = $Camera2D
+
 func _physics_process(delta):
 	mouse_from_player_pos = get_global_mouse_position() - self.position
 	

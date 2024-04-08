@@ -565,7 +565,7 @@ position = Vector2(-2, -4)
 limit_left = -1200
 limit_top = -700
 limit_right = 650
-limit_bottom = 700
+limit_bottom = 2100
 
 [node name="InventoryUI" parent="." instance=ExtResource("3_8rv7m")]
 offset_left = -44.0
