@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dykiee2q61aep"]
+[gd_scene load_steps=17 format=3 uid="uid://dykiee2q61aep"]
 
 [ext_resource type="PackedScene" uid="uid://d2wi7gkjmem4c" path="res://scene/player.tscn" id="1_me2k4"]
 [ext_resource type="Texture2D" uid="uid://de0x32efgtwij" path="res://art/environment/survivalgame-terrian-defult.png" id="2_a5lox"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://berb6omnu446o" path="res://scene/apple_tree.tscn" id="6_ww5mg"]
 [ext_resource type="PackedScene" uid="uid://cm3ni81v2dhwc" path="res://scene/stick_collectable.tscn" id="8_3nhx2"]
 [ext_resource type="PackedScene" uid="uid://cyv3c7j548lji" path="res://scene/world_2.tscn" id="10_8d7fi"]
+[ext_resource type="PackedScene" uid="uid://c34n2yclxpy32" path="res://scene/npc.tscn" id="11_3xaum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7chh"]
 texture = ExtResource("2_a5lox")
@@ -762,3 +763,7 @@ position = Vector2(33.2, 66.4)
 polygon = PackedVector2Array(23.6, -96, 26, -279.6, 280, -278.8, 279.2, 215.6, 8.4, 215.6, 8.8, 280, 48.4, 281.2, 48.4, 360.8, 48.4, 471.2, 208.4, 472.8, 207.6, 726.8, 128, 729.2, 128.8, 768.8, -248, 768, -248.4, 528, -248.8, 505.2, -229.6, 504.4, -227.6, 488.4, -206.4, 489.2, -207.2, 463.2, -169.6, 457.6, -168.8, 390, -87.6, 390, -88, 281.2, -48.8, 281.2, -47.6, 214, -480, 213.2, -479.2, 74, -432.4, 73.6, -433.6, 94.4, -420.8, 112, -401.2, 112.4, -391.6, 118, -392.8, 139.6, -376.8, 152.8, -257.2, 151.2, -246, 135.6, -246.4, 114.4, -231.2, 114.8, -232, 135.2, -217.2, 152, -182, 152.4, -166.4, 134.4, -166.8, -16.4, -186.4, -33.2, -242.8, -30.8, -246.4, -66.8, -259.2, -74, -272, -66, -272.4, -35.6, -296, -32.4, -312.4, -15.6, -313.2, 98.4, -299.2, 110.8, -278.8, 111.6, -270.4, 120.4, -276.8, 130.4, -359.6, 131.6, -365.6, 121.2, -365.6, 101.6, -384, 90.4, -407.2, 89.2, -407.2, 63.2, -426.8, 48.4, -480.8, 50, -480, -280, -464.4, -278.8, -466, -136.4, -456, -126, -344, -125.2, -344, -95.6, -336, -84.8, 9.2, -86.8, 11.2, -280.8, -487.2, -279.2, -481.6, 845.2, 283.6, 843.2, 283.2, -284.8, 14.8, -285.2, 12, -83.6)
 
 [node name="World2" parent="." instance=ExtResource("10_8d7fi")]
+
+[node name="NPC" parent="." instance=ExtResource("11_3xaum")]
+position = Vector2(-47.6, 101.6)
+scale = Vector2(1, 1)
