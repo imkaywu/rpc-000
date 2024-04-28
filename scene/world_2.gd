@@ -21,7 +21,7 @@ func _physics_process(delta):
 			if path_follower.progress_ratio >= 0.98:
 				cutscene_closing()
 				
-			if !smoke_has_happened and !smoke_is_happening and path_follower.progress_ratio >= 0.78:
+			if !smoke_has_happened and !smoke_is_happening and path_follower.progress_ratio >= 0.66:
 				smoke_is_happening = true
 				toggle_smoke()
 				await get_tree().create_timer(1).timeout

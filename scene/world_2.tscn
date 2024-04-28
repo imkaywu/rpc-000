@@ -832,10 +832,10 @@ position = Vector2(-16, 290)
 rotation = 2.65361
 
 [node name="Camera2D" type="Camera2D" parent="CutSceneOpening/Path2D/PathFollow2D"]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="SmokeParticles" type="GPUParticles2D" parent="CutSceneOpening"]
-position = Vector2(-46, 727)
+position = Vector2(-159, 741)
 emitting = false
 amount = 800
 process_material = SubResource("ParticleProcessMaterial_la2f5")
