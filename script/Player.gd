@@ -1,5 +1,11 @@
 extends CharacterBody2D
 
+
+signal stick_collected
+signal apple_collected
+signal slime_collected
+
+
 var speed = 200
 var player_state
 var bow_equiped = false
@@ -91,3 +97,9 @@ func player():
 
 func collect(item):
 	inventory.insert(item)
+	if str(item) == "<Resource#-9223372001320630916>":
+		emit_signal("stick_collected")
+	elif str(item) == "<Resource#-9223372001857501837>":
+		emit_signal("apple_collected")
+	elif str(item) == "<Resource#-9223372004374084279>":
+		emit_signal("slime_collected")

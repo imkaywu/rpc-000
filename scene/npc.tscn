@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://c34n2yclxpy32"]
+[gd_scene load_steps=26 format=3 uid="uid://c34n2yclxpy32"]
 
 [ext_resource type="Texture2D" uid="uid://cvj62fpklk0e0" path="res://art/character/Human-Worker-Red.png" id="1_iw3d3"]
 [ext_resource type="Script" path="res://scene/npc.gd" id="1_k5rco"]
 [ext_resource type="PackedScene" uid="uid://b673qtn85ss7a" path="res://dialogue/dialogue.tscn" id="3_0uh7y"]
+[ext_resource type="PackedScene" uid="uid://fj67kvged0xl" path="res://scene/npc_quest.tscn" id="4_hik4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ei5b"]
 atlas = ExtResource("1_iw3d3")
@@ -185,7 +186,10 @@ autostart = true
 
 [node name="Dialogue" parent="." instance=ExtResource("3_0uh7y")]
 
+[node name="NPCQuest" parent="." instance=ExtResource("4_hik4i")]
+
 [connection signal="body_entered" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="diag_finished" from="Dialogue" to="." method="_on_dialogue_diag_finished"]
+[connection signal="quest_menu_closed" from="NPCQuest" to="." method="_on_npc_quest_quest_menu_closed"]

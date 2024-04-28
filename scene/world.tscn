@@ -767,3 +767,5 @@ polygon = PackedVector2Array(23.6, -96, 26, -279.6, 280, -278.8, 279.2, 215.6, 8
 [node name="NPC" parent="." instance=ExtResource("11_3xaum")]
 position = Vector2(-47.6, 101.6)
 scale = Vector2(1, 1)
+
+[connection signal="stick_collected" from="Player" to="NPC" method="_on_player_stick_collected"]
